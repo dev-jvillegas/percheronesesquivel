@@ -1,0 +1,308 @@
+/* =============================================
+   SECCIÓN PERCHERONES — Esquivel
+   ============================================= */
+
+#percherones {
+  background: var(--per-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Textura oscura */
+#percherones::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(201,168,76,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 85% 75%, rgba(201,168,76,0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.section-header__tag--per {
+  background: rgba(201,168,76,0.12);
+  color: var(--per-gold);
+  border: 1px solid rgba(201,168,76,0.3);
+}
+
+.section-header__title--per { color: var(--per-light); }
+
+.section-header__title--per em { color: var(--per-gold); }
+
+.section-header__desc--per {
+  color: rgba(242,236,216,0.65);
+}
+
+/* === SERVICIOS DE EVENTOS === */
+.per-eventos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 4rem;
+}
+
+.per-evento-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  cursor: pointer;
+}
+
+.per-evento-card__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.7s var(--ease-out), filter 0.5s ease;
+  filter: brightness(0.45) saturate(0.6);
+}
+
+.per-evento-card:hover .per-evento-card__bg {
+  transform: scale(1.07);
+  filter: brightness(0.35) saturate(0.7);
+}
+
+/* Overlay gradiente */
+.per-evento-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+}
+
+/* Overlay dorado al hover */
+.per-evento-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201,168,76,0.18) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.per-evento-card:hover::after { opacity: 1; }
+
+/* Borde dorado lateral */
+.per-evento-card--bodas { border-right: 1px solid rgba(201,168,76,0.2); }
+.per-evento-card--xv    { border-right: 1px solid rgba(201,168,76,0.2); }
+
+.per-evento-card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.8rem;
+  z-index: 2;
+  transform: translateY(0);
+  transition: transform 0.4s var(--ease-out);
+}
+
+.per-evento-card:hover .per-evento-card__content { transform: translateY(-6px); }
+
+.per-evento-card__icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.7rem;
+  display: block;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+}
+
+.per-evento-card__tag {
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--per-gold);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.per-evento-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 900;
+  color: var(--white);
+  font-style: italic;
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+
+.per-evento-card__desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s var(--ease-out), opacity 0.4s ease;
+  opacity: 0;
+}
+
+.per-evento-card:hover .per-evento-card__desc {
+  max-height: 120px;
+  opacity: 1;
+}
+
+/* === SERVICIO FÚNEBRE (especial) === */
+.per-evento-card--funebre {
+  background: var(--per-dark);
+}
+
+.per-evento-card--funebre .per-evento-card__bg {
+  filter: brightness(0.30) saturate(0.3);
+}
+
+.per-evento-card--funebre .per-evento-card__overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+}
+
+.per-evento-card--funebre .per-evento-card__title {
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.per-evento-card--funebre .per-evento-card__tag {
+  color: rgba(201,168,76,0.7);
+  font-style: italic;
+}
+
+/* Línea decorativa */
+.per-evento-card--funebre::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 30px;
+  height: 30px;
+  border-top: 1px solid rgba(201,168,76,0.4);
+  border-right: 1px solid rgba(201,168,76,0.4);
+  z-index: 3;
+}
+
+/* === COBERTURA === */
+.per-cobertura {
+  background: rgba(255,255,255,0.04);
+  border-top: 1px solid rgba(201,168,76,0.15);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  padding: 3rem;
+}
+
+.per-cobertura__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.per-cobertura__info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.per-cobertura__icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.per-cobertura__text-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--per-light);
+  margin-bottom: 0.3rem;
+}
+
+.per-cobertura__text-desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: rgba(242,236,216,0.6);
+  font-style: italic;
+}
+
+.btn-cotizar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--per-gold);
+  color: var(--per-dark);
+  padding: 0.9rem 2rem;
+  border-radius: 100px;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-cotizar:hover {
+  background: var(--per-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(201,168,76,0.35);
+}
+
+/* === STATS === */
+.per-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem 4rem;
+  gap: 1px;
+  background: rgba(201,168,76,0.1);
+  border-top: 1px solid rgba(201,168,76,0.1);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+}
+
+.per-stat {
+  background: var(--per-primary);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+.per-stat:hover { background: rgba(255,255,255,0.03); }
+
+.per-stat__number {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 900;
+  color: var(--per-gold);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.per-stat__label {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(242,236,216,0.5);
+}
+
+@media (max-width: 900px) {
+  .per-eventos { grid-template-columns: 1fr; padding: 0 1.5rem 3rem; }
+  .per-evento-card { aspect-ratio: 16/9; }
+  .per-evento-card--bodas, .per-evento-card--xv { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.2); }
+  .per-evento-card__desc { max-height: 80px; opacity: 1; }
+  .per-stats { grid-template-columns: repeat(3, 1fr); padding: 0 1.5rem 3rem; }
+  .per-cobertura { padding: 2rem 1.5rem; }
+}
+
+@media (max-width: 580px) {
+  .per-stats { grid-template-columns: 1fr; }
+  .per-cobertura__inner { flex-direction: column; align-items: flex-start; }
+}

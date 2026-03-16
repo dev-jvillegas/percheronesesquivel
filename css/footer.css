@@ -1,0 +1,231 @@
+/* =============================================
+   FOOTER — Esquivel
+   ============================================= */
+
+.footer {
+  background: #0D0D0D;
+  padding: 3.5rem 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--vet-primary), var(--vet-accent) 40%, var(--per-gold) 60%, var(--per-primary));
+}
+
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+/* Brand */
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer__brand-logo img {
+  height: 44px;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+.footer__brand-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.footer__brand-name span {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+.footer__brand-desc {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.45);
+  font-style: italic;
+  max-width: 280px;
+}
+
+/* Columnas */
+.footer__col-title {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer__col-title--vet { color: var(--vet-accent); opacity: 0.7; }
+.footer__col-title--per { color: var(--per-gold); opacity: 0.7; }
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__links a {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s ease;
+  line-height: 1.5;
+}
+
+.footer__links a:hover { color: var(--white); }
+
+/* Bottom bar */
+.footer__bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer__copy {
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.3);
+}
+
+.footer__copy a {
+  color: rgba(255,255,255,0.45);
+  transition: color 0.2s ease;
+}
+.footer__copy a:hover { color: rgba(255,255,255,0.75); }
+
+.footer__social {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.footer__social-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+.footer__social-btn:hover {
+  background: rgba(255,255,255,0.12);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Botón flotante WhatsApp */
+.fab-whatsapp {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  z-index: 900;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s ease;
+  animation: fabPulse 3s ease-in-out infinite;
+}
+
+.fab-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(37,211,102,0.6);
+  animation: none;
+}
+
+.fab-whatsapp svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--white);
+}
+
+.footer-credit {
+  font-size: 0.72rem;
+  color: #2f8f8b;
+  margin-top: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.footer-credit a {
+  color: #2f8f8b;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer-credit a:hover {
+  color: #ffffff;
+}
+
+@keyframes fabPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); }
+  50%       { box-shadow: 0 4px 30px rgba(37,211,102,0.7), 0 0 0 8px rgba(37,211,102,0.1); }
+}
+
+/* Animaciones de entrada */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s var(--ease-out);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up-delay-1 { transition-delay: 0.1s; }
+.fade-up-delay-2 { transition-delay: 0.2s; }
+.fade-up-delay-3 { transition-delay: 0.3s; }
+.fade-up-delay-4 { transition-delay: 0.4s; }
+
+@media (max-width: 900px) {
+  .footer__inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer { padding: 2.5rem 1.5rem 1.5rem; }
+  .footer__bottom { flex-direction: column; align-items: flex-start; }
+}

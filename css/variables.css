@@ -1,0 +1,79 @@
+/* =============================================
+   VARIABLES & RESET — Esquivel
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+  /* === VETERINARIA palette === */
+  --vet-primary:    #2D5016;
+  --vet-accent:     #7CB87A;
+  --vet-light:      #F5F0E8;
+  --vet-mid:        #E8F0DC;
+  --vet-dark:       #1A3009;
+  --vet-text:       #1A3009;
+  --vet-gold:       #8B9A4A;
+
+  /* === PERCHERONES palette === */
+  --per-primary:    #1A1A1A;
+  --per-accent:     #C9A84C;
+  --per-light:      #F2ECD8;
+  --per-mid:        #2E2A24;
+  --per-dark:       #0D0D0D;
+  --per-text:       #F2ECD8;
+  --per-gold:       #C9A84C;
+
+  /* === SHARED === */
+  --white:          #FFFFFF;
+  --off-white:      #FAF8F4;
+  --shadow-soft:    0 4px 24px rgba(0,0,0,0.10);
+  --shadow-strong:  0 8px 48px rgba(0,0,0,0.22);
+  --radius-sm:      6px;
+  --radius-md:      14px;
+  --radius-lg:      28px;
+
+  /* === TYPOGRAPHY === */
+  --font-display:   'Playfair Display', Georgia, serif;
+  --font-body:      'Cormorant Garamond', Georgia, serif;
+  --font-ui:        'Josefin Sans', sans-serif;
+
+  /* === TRANSITIONS === */
+  --ease-out:       cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:    cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--off-white);
+  color: #1A1A1A;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul { list-style: none; }
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--off-white); }
+::-webkit-scrollbar-thumb { background: var(--vet-primary); border-radius: 3px; }

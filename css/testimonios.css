@@ -1,0 +1,290 @@
+/* =============================================
+   NOSOTROS + TESTIMONIOS — Esquivel
+   ============================================= */
+
+/* === NOSOTROS === */
+#nosotros {
+  background: var(--vet-dark);
+  padding: 5rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#nosotros::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124,184,122,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.nosotros__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.nosotros__img-wrap {
+  position: relative;
+}
+
+.nosotros__img-frame {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+}
+
+.nosotros__img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9) saturate(0.85);
+}
+
+.nosotros__img-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(26,48,9,0.6) 100%);
+}
+
+/* Decoración esquina dorada */
+.nosotros__img-decoration {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 100px;
+  height: 100px;
+  border-bottom: 2px solid var(--vet-gold);
+  border-right: 2px solid var(--vet-gold);
+  border-radius: 0 0 var(--radius-sm) 0;
+}
+
+.nosotros__badge {
+  position: absolute;
+  top: 1.5rem;
+  left: -1rem;
+  background: var(--vet-primary);
+  color: var(--white);
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  z-index: 2;
+}
+
+.nosotros__badge-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.nosotros__badge-sub {
+  font-family: var(--font-ui);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--vet-accent);
+  margin-top: 0.2rem;
+}
+
+.nosotros__content {
+  padding: 1rem 0;
+}
+
+.nosotros__tag {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--vet-accent);
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(124,184,122,0.3);
+  padding-bottom: 0.4rem;
+}
+
+.nosotros__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 1.4rem;
+}
+
+.nosotros__title em {
+  font-style: italic;
+  color: var(--vet-accent);
+}
+
+.nosotros__text {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.72);
+  margin-bottom: 1rem;
+}
+
+.nosotros__text strong {
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+}
+
+.nosotros__redes {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.nosotros__red-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  border: 1.5px solid transparent;
+}
+
+.nosotros__red-btn--instagram {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.15);
+  color: var(--white);
+}
+.nosotros__red-btn--instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-color: transparent;
+}
+
+.nosotros__red-btn--facebook {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.15);
+  color: var(--white);
+}
+.nosotros__red-btn--facebook:hover {
+  background: #1877F2;
+  border-color: transparent;
+}
+
+/* === TESTIMONIOS === */
+#testimonios {
+  background: var(--off-white);
+  padding: 5rem 3rem 4rem;
+  position: relative;
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonio-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.8rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  position: relative;
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease;
+}
+
+.testimonio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Comilla decorativa */
+.testimonio-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(45,80,22,0.1);
+  font-weight: 900;
+}
+
+.testimonio-card--per::before {
+  color: rgba(201,168,76,0.15);
+}
+
+.testimonio-card__stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 1rem;
+  color: #F4B942;
+  font-size: 0.9rem;
+}
+
+.testimonio-card__text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.75;
+  font-style: italic;
+  margin-bottom: 1.4rem;
+}
+
+.testimonio-card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.testimonio-card__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.testimonio-card__avatar--vet { background: var(--vet-primary); }
+.testimonio-card__avatar--per { background: var(--per-primary); border: 1.5px solid var(--per-gold); }
+
+.testimonio-card__name {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #222;
+}
+
+.testimonio-card__event {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: #888;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .nosotros__inner { grid-template-columns: 1fr; gap: 3rem; }
+  .nosotros__img-frame { aspect-ratio: 16/9; }
+  .testimonios-grid { grid-template-columns: 1fr; }
+  #nosotros, #testimonios { padding: 3.5rem 1.5rem; }
+}

@@ -1,0 +1,264 @@
+/* =============================================
+   SECCIÓN VETERINARIA — Esquivel
+   ============================================= */
+
+#veterinaria {
+  background: var(--vet-light);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Textura sutil de fondo */
+#veterinaria::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 80% 20%, rgba(124,184,122,0.12) 0%, transparent 55%),
+    radial-gradient(circle at 10% 80%, rgba(45,80,22,0.08) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+/* === ENCABEZADO SECCIÓN === */
+.section-header {
+  text-align: center;
+  padding: 5rem 2rem 3.5rem;
+  position: relative;
+}
+
+.section-header__tag {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 0.4rem 1.1rem;
+  border-radius: 100px;
+  margin-bottom: 1.2rem;
+}
+
+.section-header__tag--vet {
+  background: rgba(45,80,22,0.1);
+  color: var(--vet-primary);
+  border: 1px solid rgba(45,80,22,0.2);
+}
+
+.section-header__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.section-header__title--vet { color: var(--vet-primary); }
+
+.section-header__title em {
+  font-style: italic;
+  color: var(--vet-accent);
+}
+
+.section-header__desc {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: #4a5a3a;
+  max-width: 520px;
+  margin: 1.1rem auto 0;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* === SERVICIOS GRID === */
+.vet-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  padding: 0 3rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vet-servicio-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(45,80,22,0.1);
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.vet-servicio-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(45,80,22,0.04), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.vet-servicio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(45,80,22,0.14);
+  border-color: rgba(124,184,122,0.4);
+}
+.vet-servicio-card:hover::before { opacity: 1; }
+
+.vet-servicio-card__icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.9rem;
+  display: block;
+}
+
+.vet-servicio-card__title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--vet-primary);
+  margin-bottom: 0.5rem;
+}
+
+.vet-servicio-card__desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #5a6a4a;
+  line-height: 1.6;
+}
+
+/* === HORARIOS === */
+.vet-horarios {
+  background: var(--vet-primary);
+  padding: 3.5rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.vet-horarios::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+
+.vet-horarios::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -40px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.03);
+}
+
+.vet-horarios__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+}
+
+.vet-horarios__title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.vet-horarios__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.vet-horario-item {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.9rem;
+  text-align: center;
+  transition: background 0.25s ease;
+}
+
+.vet-horario-item:hover { background: rgba(255,255,255,0.14); }
+
+.vet-horario-item__day {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--vet-accent);
+  margin-bottom: 0.3rem;
+}
+
+.vet-horario-item__hours {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+}
+
+.vet-horarios__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.vet-horarios__cta-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  font-style: italic;
+  text-align: center;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: #25D366;
+  color: var(--white);
+  padding: 0.9rem 1.8rem;
+  border-radius: 100px;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+}
+
+.btn-whatsapp svg { width: 18px; height: 18px; }
+
+@media (max-width: 900px) {
+  .vet-servicios { grid-template-columns: repeat(2, 1fr); padding: 0 1.5rem 3rem; }
+  .vet-horarios__inner { grid-template-columns: 1fr; }
+  .vet-horarios__grid { grid-template-columns: repeat(3, 1fr); }
+  .vet-horarios { padding: 3rem 1.5rem; }
+}
+
+@media (max-width: 580px) {
+  .vet-servicios { grid-template-columns: 1fr; padding: 0 1.2rem 2.5rem; }
+  .vet-horarios__grid { grid-template-columns: repeat(2, 1fr); }
+  .section-header { padding: 3.5rem 1.5rem 2.5rem; }
+}
