@@ -36,7 +36,7 @@ esquivel/
 │   ├── veterinaria.css     ← Sección veterinaria y horarios
 │   ├── percherones.css     ← Eventos, stats y cobertura
 │   ├── galeria.css         ← Grid masonry + lightbox
-│   ├── testimonios.css     ← Sección nosotros
+│   ├── testimonios.css     ← Secciones nosotros y opiniones
 │   ├── contacto.css        ← Datos de contacto + mapa
 │   └── footer.css          ← Footer + botón flotante WhatsApp
 ├── js/
@@ -93,8 +93,9 @@ Hueso           #F2ECD8
 3. **Percherones** — Bodas, XV años y servicio fúnebre
 4. **Galería** — 20 fotos reales con filtros y lightbox
 5. **Nosotros** — Historia de Alfonso Esquivel
-6. **Contacto** — WhatsApp, teléfono, Instagram, Facebook y mapa
-7. **Footer**
+6. **Opiniones** — Calificación y reseñas verificables de Google
+7. **Contacto** — WhatsApp, teléfono, Instagram, Facebook y mapa
+8. **Footer**
 
 ---
 
