@@ -259,13 +259,11 @@
 .per-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 3rem 4rem;
-  gap: 1px;
-  background: rgba(201,168,76,0.1);
-  border-top: 1px solid rgba(201,168,76,0.1);
-  border-bottom: 1px solid rgba(201,168,76,0.1);
+  width: calc(100% - 6rem);
+  max-width: 1104px;
+  margin: 0 auto 4rem;
+  background: transparent;
+  border: 1px solid rgba(201,168,76,0.16);
 }
 
 .per-stat {
@@ -273,6 +271,10 @@
   padding: 2.5rem 2rem;
   text-align: center;
   transition: background 0.3s ease;
+}
+
+.per-stat + .per-stat {
+  border-left: 1px solid rgba(201,168,76,0.16);
 }
 .per-stat:hover { background: rgba(255,255,255,0.03); }
 
@@ -298,11 +300,19 @@
   .per-evento-card { aspect-ratio: 16/9; }
   .per-evento-card--bodas, .per-evento-card--xv { border-right: none; border-bottom: 1px solid rgba(201,168,76,0.2); }
   .per-evento-card__desc { max-height: 80px; opacity: 1; }
-  .per-stats { grid-template-columns: repeat(3, 1fr); padding: 0 1.5rem 3rem; }
+  .per-stats {
+    grid-template-columns: repeat(3, 1fr);
+    width: calc(100% - 3rem);
+    margin-bottom: 3rem;
+  }
   .per-cobertura { padding: 2rem 1.5rem; }
 }
 
 @media (max-width: 580px) {
   .per-stats { grid-template-columns: 1fr; }
+  .per-stat + .per-stat {
+    border-left: 0;
+    border-top: 1px solid rgba(201,168,76,0.16);
+  }
   .per-cobertura__inner { flex-direction: column; align-items: flex-start; }
 }

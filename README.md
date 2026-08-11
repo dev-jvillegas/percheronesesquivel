@@ -36,7 +36,7 @@ esquivel/
 │   ├── veterinaria.css     ← Sección veterinaria y horarios
 │   ├── percherones.css     ← Eventos, stats y cobertura
 │   ├── galeria.css         ← Grid masonry + lightbox
-│   ├── testimonios.css     ← Sección nosotros + reseñas
+│   ├── testimonios.css     ← Sección nosotros
 │   ├── contacto.css        ← Datos de contacto + mapa
 │   └── footer.css          ← Footer + botón flotante WhatsApp
 ├── js/
@@ -93,9 +93,8 @@ Hueso           #F2ECD8
 3. **Percherones** — Bodas, XV años y servicio fúnebre
 4. **Galería** — 20 fotos reales con filtros y lightbox
 5. **Nosotros** — Historia de Alfonso Esquivel
-6. **Testimonios** — Reseñas de clientes
-7. **Contacto** — WhatsApp, Instagram, Facebook y mapa
-8. **Footer**
+6. **Contacto** — WhatsApp, teléfono, Instagram, Facebook y mapa
+7. **Footer**
 
 ---
 
@@ -127,9 +126,6 @@ Hueso           #F2ECD8
 ## 🚀 Uso
 
 ```bash
-# Clonar el repo
-git clone https://github.com/tu-usuario/esquivel.git
-
 # Abrir en navegador
 cd esquivel
 open index.html   # macOS

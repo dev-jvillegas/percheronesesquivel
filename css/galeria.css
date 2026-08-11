@@ -43,6 +43,7 @@
   background: transparent;
   color: #888;
   border-color: #ddd;
+  min-height: 44px;
 }
 
 .galeria-filtro-btn:hover {
@@ -110,6 +111,19 @@
 .galeria-item:hover img {
   transform: scale(1.06);
   filter: brightness(0.75);
+}
+
+.galeria-item:focus-visible {
+  z-index: 2;
+}
+
+.galeria-item:focus-visible img {
+  transform: scale(1.03);
+  filter: brightness(0.72);
+}
+
+.galeria-item:focus-visible .galeria-item__overlay {
+  opacity: 1;
 }
 
 .galeria-item__overlay {

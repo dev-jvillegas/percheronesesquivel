@@ -6,8 +6,34 @@
   <meta name="description" content="Percherones y Veterinarias Esquivel — Renta de carretas con caballos percherones para bodas, XV años y acompañamiento fúnebre. Veterinaria en Puruándiro, Michoacán." />
   <meta property="og:title" content="Percherones y Veterinarias Esquivel | Puruándiro, Michoacán" />
   <meta property="og:description" content="Caballos percherones y renta de carretas para tus eventos más especiales. Veterinaria para todas las mascotas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta name="theme-color" content="#2D5016" />
   <title>Percherones y Veterinarias Esquivel — Puruándiro, Michoacán</title>
   <link rel="icon" type="image/png" href="img/logo-transparente.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Josefin+Sans:wght@400;600&amp;display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "VeterinaryCare"],
+      "name": "Percherones y Veterinarias Esquivel",
+      "description": "Veterinaria y renta de carretas con caballos percherones para eventos en Puruándiro y la región.",
+      "telephone": "+52 438 100 1019",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Puruándiro",
+        "addressRegion": "Michoacán",
+        "addressCountry": "MX"
+      },
+      "areaServed": "Michoacán",
+      "sameAs": [
+        "https://www.instagram.com/veterinariasesquivel",
+        "https://www.facebook.com/PercheronesEsquivelPuruandiro/"
+      ]
+    }
+  </script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/variables.css" />
@@ -27,7 +53,7 @@
        ======================================== -->
   <nav class="navbar" aria-label="Navegación principal">
     <a href="#inicio" class="navbar-brand" aria-label="Inicio">
-      <img src="img/logo-transparente.png" alt="Logo Esquivel" class="navbar-logo" />
+      <img src="img/logo-transparente.png" alt="Logo Esquivel" class="navbar-logo" width="320" height="320" />
       <div class="navbar-name">
         Percherones Esquivel
         <span>Puruándiro, Michoacán</span>
@@ -43,13 +69,13 @@
       <a href="#contacto" class="navbar-cta">Contacto</a>
     </div>
 
-    <button class="navbar-hamburger" aria-label="Menú" aria-expanded="false">
+    <button class="navbar-hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <!-- Mobile nav -->
-  <nav class="navbar-mobile" aria-label="Menú móvil">
+  <nav class="navbar-mobile" id="menu-movil" aria-label="Menú móvil" aria-hidden="true">
     <a href="#veterinaria">🏥 Veterinaria</a>
     <a href="#percherones">🐴 Percherones</a>
     <a href="#galeria">📷 Galería</a>
@@ -58,10 +84,12 @@
   </nav>
 
 
+  <main>
   <!-- ========================================
        HERO SPLIT SCREEN
        ======================================== -->
   <section class="hero" id="inicio" aria-label="Bienvenida">
+    <h1 class="visually-hidden">Veterinaria y renta de carretas con caballos percherones en Puruándiro, Michoacán</h1>
 
     <!-- Panel Veterinaria -->
     <a href="#veterinaria" class="hero-panel hero-panel--vet" aria-label="Ir a Veterinaria">
@@ -72,7 +100,7 @@
         <h2 class="hero-panel__title">Veterinaria<br/>Esquivel</h2>
         <p class="hero-panel__subtitle">Consultas, vacunas, cirugías y estética para tus mascotas</p>
         <span class="hero-panel__cta">
-          Conocer más
+          Ver servicios y agendar
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </span>
       </div>
@@ -82,7 +110,7 @@
     <div class="hero-divider" aria-hidden="true">
       <div class="hero-divider__line"></div>
       <div class="hero-divider__badge">
-        <img src="img/logo-transparente.png" alt="Esquivel" />
+        <img src="img/logo-transparente.png" alt="" width="320" height="320" />
       </div>
     </div>
 
@@ -95,7 +123,7 @@
         <h2 class="hero-panel__title">Percherones<br/>Esquivel</h2>
         <p class="hero-panel__subtitle">Bodas, XV años y acompañamiento fúnebre en carreta</p>
         <span class="hero-panel__cta">
-          Ver servicios
+          Ver opciones y cotizar
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </span>
       </div>
@@ -107,6 +135,18 @@
       <span>Descubrir</span>
     </div>
   </section>
+
+  <aside class="quick-actions" aria-label="Acciones rápidas">
+    <p>¿Ya sabes qué necesitas?</p>
+    <div class="quick-actions__links">
+      <a href="https://wa.me/524381001019?text=Hola,%20me%20gustaría%20agendar%20una%20cita%20en%20la%20veterinaria." target="_blank" rel="noopener">
+        Agendar cita veterinaria
+      </a>
+      <a href="https://wa.me/524381001019?text=Hola,%20me%20gustaría%20cotizar%20el%20servicio%20de%20carreta%20para%20mi%20evento." target="_blank" rel="noopener">
+        Cotizar carreta para evento
+      </a>
+    </div>
+  </aside>
 
 
   <!-- ========================================
@@ -226,7 +266,7 @@
     <div class="per-eventos">
 
       <!-- Bodas -->
-      <div class="per-evento-card per-evento-card--bodas" tabindex="0" role="article">
+      <div class="per-evento-card per-evento-card--bodas" role="article">
         <div class="per-evento-card__bg" style="background-image: url('img/img6.jpg');"></div>
         <div class="per-evento-card__overlay"></div>
         <div class="per-evento-card__content">
@@ -240,7 +280,7 @@
       </div>
 
       <!-- XV Años -->
-      <div class="per-evento-card per-evento-card--xv" tabindex="0" role="article">
+      <div class="per-evento-card per-evento-card--xv" role="article">
         <div class="per-evento-card__bg" style="background-image: url('img/img8.jpg');"></div>
         <div class="per-evento-card__overlay"></div>
         <div class="per-evento-card__content">
@@ -254,7 +294,7 @@
       </div>
 
       <!-- Fúnebre -->
-      <div class="per-evento-card per-evento-card--funebre" tabindex="0" role="article">
+      <div class="per-evento-card per-evento-card--funebre" role="article">
         <div class="per-evento-card__bg" style="background-image: url('img/img20.jpg');"></div>
         <div class="per-evento-card__overlay"></div>
         <div class="per-evento-card__content">
@@ -326,102 +366,102 @@
     <!-- Grid -->
     <div class="galeria-grid">
 
-      <div class="galeria-item galeria-item--large" data-category="per">
+      <div class="galeria-item galeria-item--large" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Carreta con percherones blancos para boda">
         <img src="img/img10.jpg" alt="Carreta con percherones blancos para boda" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Bodas</span></div>
       </div>
 
-      <div class="galeria-item" data-category="per">
+      <div class="galeria-item" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Novia junto a carreta">
         <img src="img/img6.jpg" alt="Novia junto a carreta" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Bodas</span></div>
       </div>
 
-      <div class="galeria-item" data-category="per">
+      <div class="galeria-item" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Carreta de boda">
         <img src="img/img17.jpg" alt="Carreta de boda" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Bodas</span></div>
       </div>
 
-      <div class="galeria-item galeria-item--tall" data-category="per">
+      <div class="galeria-item galeria-item--tall" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Quinceañera en carreta">
         <img src="img/img8.jpg" alt="Quinceañera en carreta" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">XV Años</span></div>
       </div>
 
-      <div class="galeria-item galeria-item--wide" data-category="per">
+      <div class="galeria-item galeria-item--wide" data-category="per" role="button" tabindex="0" aria-label="Ampliar: XV años en carreta blanca">
         <img src="img/img2.jpg" alt="XV años en carreta blanca" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">XV Años</span></div>
       </div>
 
-      <div class="galeria-item" data-category="per">
+      <div class="galeria-item" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Carreta por arcos históricos">
         <img src="img/img5.jpg" alt="Carreta por arcos históricos" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Puruándiro</span></div>
       </div>
 
-      <div class="galeria-item" data-category="per">
+      <div class="galeria-item" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Carreta en glorieta de Puruándiro">
         <img src="img/img4.jpg" alt="Carreta en glorieta de Puruándiro" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Puruándiro</span></div>
       </div>
 
-      <div class="galeria-item galeria-item--wide" data-category="per">
+      <div class="galeria-item galeria-item--wide" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Carreta doble en hacienda">
         <img src="img/img9.jpg" alt="Carreta doble en hacienda" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Hacienda</span></div>
       </div>
 
-      <div class="galeria-item" data-category="per">
+      <div class="galeria-item" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Percherón negro con carreta">
         <img src="img/img16.jpg" alt="Percheron negro con carreta" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Percheron</span></div>
       </div>
 
-      <div class="galeria-item" data-category="per">
+      <div class="galeria-item" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Caballos blancos en hacienda">
         <img src="img/img7.jpg" alt="Caballos blancos en hacienda" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Hacienda</span></div>
       </div>
 
-      <div class="galeria-item galeria-item--wide" data-category="per">
+      <div class="galeria-item galeria-item--wide" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Percherón negro jalando carreta">
         <img src="img/img13.jpg" alt="Percheron negro jalando carreta" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Percherones</span></div>
       </div>
 
-      <div class="galeria-item" data-category="per">
+      <div class="galeria-item" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Boda con carreta y flores">
         <img src="img/img14.jpg" alt="Boda con carreta y flores" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Bodas</span></div>
       </div>
 
-      <div class="galeria-item" data-category="per">
+      <div class="galeria-item" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Quinceañera en carreta">
         <img src="img/img15.jpg" alt="Quinceañera en carreta" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">XV Años</span></div>
       </div>
 
-      <div class="galeria-item galeria-item--wide" data-category="per">
+      <div class="galeria-item galeria-item--wide" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Carroza fúnebre">
         <img src="img/img20.jpg" alt="Carroza fúnebre" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Servicio Fúnebre</span></div>
       </div>
 
-      <div class="galeria-item" data-category="per">
+      <div class="galeria-item" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Carreta frente a iglesia">
         <img src="img/img11.jpg" alt="Carreta frente a iglesia" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Percherones</span></div>
       </div>
 
-      <div class="galeria-item" data-category="per">
+      <div class="galeria-item" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Carreta frente a templo">
         <img src="img/img18.jpg" alt="Carreta frente a templo" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Percherones</span></div>
       </div>
 
-      <div class="galeria-item galeria-item--wide" data-category="per">
+      <div class="galeria-item galeria-item--wide" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Desfile con carreta">
         <img src="img/img1.jpg" alt="Desfile con carreta" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Eventos</span></div>
       </div>
 
-      <div class="galeria-item" data-category="per">
+      <div class="galeria-item" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Carreta en lienzo charro">
         <img src="img/img12.jpg" alt="Carreta en lienzo charro" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Eventos</span></div>
       </div>
 
-      <div class="galeria-item galeria-item--large" data-category="vet">
+      <div class="galeria-item galeria-item--large" data-category="vet" role="button" tabindex="0" aria-label="Ampliar: Cuidado de caballos">
         <img src="img/img3.jpg" alt="Cuidado de caballos" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Cuidado Animal</span></div>
       </div>
 
-      <div class="galeria-item galeria-item--wide" data-category="per">
+      <div class="galeria-item galeria-item--wide" data-category="per" role="button" tabindex="0" aria-label="Ampliar: Carreta negra elegante">
         <img src="img/img19.jpg" alt="Carreta negra elegante" loading="lazy" />
         <div class="galeria-item__overlay"><span class="galeria-item__label">Percherones</span></div>
       </div>
@@ -429,7 +469,7 @@
     </div>
 
     <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-label="Imagen ampliada" aria-modal="true">
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Imagen ampliada" aria-modal="true" aria-hidden="true" tabindex="-1">
       <button class="lightbox__close" id="lightbox-close" aria-label="Cerrar">✕</button>
       <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Anterior">‹</button>
       <div class="lightbox__img-wrap">
@@ -449,7 +489,7 @@
 
       <div class="nosotros__img-wrap fade-up">
         <div class="nosotros__img-frame">
-          <img src="img/img-AlfonsoEsquivel.jpg" alt="Alfonso Esquivel, fundador" />
+          <img src="img/img-AlfonsoEsquivel.jpg" alt="Alfonso Esquivel, fundador" width="1280" height="720" loading="lazy" />
         </div>
         <div class="nosotros__img-decoration"></div>
         <div class="nosotros__badge">
@@ -489,66 +529,6 @@
 
 
   <!-- ========================================
-       TESTIMONIOS
-       ======================================== -->
-  <section id="testimonios" aria-labelledby="testimonios-title">
-
-    <div class="section-header">
-      <span class="section-header__tag section-header__tag--vet fade-up">Lo que dicen nuestros clientes</span>
-      <h2 class="section-header__title section-header__title--vet fade-up fade-up-delay-1" id="testimonios-title">
-        <em>Reseñas</em> que nos llenan de orgullo
-      </h2>
-    </div>
-
-    <div class="testimonios-grid">
-
-      <div class="testimonio-card fade-up">
-        <div class="testimonio-card__stars">★★★★★</div>
-        <p class="testimonio-card__text">
-          "Contratamos la carreta para nuestra boda y fue lo mejor que pudimos haber elegido. Los caballos estaban perfectamente cuidados y el servicio fue puntual y muy profesional."
-        </p>
-        <div class="testimonio-card__author">
-          <div class="testimonio-card__avatar testimonio-card__avatar--per">M</div>
-          <div>
-            <div class="testimonio-card__name">María González</div>
-            <div class="testimonio-card__event">Boda · Puruándiro</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonio-card fade-up fade-up-delay-1">
-        <div class="testimonio-card__stars">★★★★★</div>
-        <p class="testimonio-card__text">
-          "Mi hija quedó encantada con su entrada en carreta para sus XV años. Todos los invitados quedaron sorprendidos. Definitivamente lo recomiendo al 100%."
-        </p>
-        <div class="testimonio-card__author">
-          <div class="testimonio-card__avatar testimonio-card__avatar--per">R</div>
-          <div>
-            <div class="testimonio-card__name">Rosario Herrera</div>
-            <div class="testimonio-card__event">XV Años · Michoacán</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonio-card fade-up fade-up-delay-2">
-        <div class="testimonio-card__stars">★★★★★</div>
-        <p class="testimonio-card__text">
-          "La veterinaria Esquivel atiende a mi perro con mucho cuidado y amor. El Dr. siempre explica muy bien el diagnóstico y el precio es muy justo."
-        </p>
-        <div class="testimonio-card__author">
-          <div class="testimonio-card__avatar testimonio-card__avatar--vet">C</div>
-          <div>
-            <div class="testimonio-card__name">Carlos Mendoza</div>
-            <div class="testimonio-card__event">Veterinaria · Puruándiro</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ========================================
        CONTACTO + MAPA
        ======================================== -->
   <section id="contacto" aria-labelledby="contacto-title">
@@ -570,7 +550,15 @@
               <svg viewBox="0 0 24 24" fill="#25D366" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             </div>
             <div>
-              <div class="contacto__dato-label">WhatsApp / Teléfono</div>
+              <div class="contacto__dato-label">WhatsApp</div>
+              <div class="contacto__dato-value">438 100 1019</div>
+            </div>
+          </a>
+
+          <a href="tel:+524381001019" class="contacto__dato" aria-label="Llamar al 438 100 1019">
+            <div class="contacto__dato-icon contacto__dato-icon--loc" aria-hidden="true">📞</div>
+            <div>
+              <div class="contacto__dato-label">Teléfono</div>
               <div class="contacto__dato-value">438 100 1019</div>
             </div>
           </a>
@@ -626,17 +614,18 @@
 
     </div>
   </section>
+  </main>
 
 
   <!-- ========================================
        FOOTER
        ======================================== -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="footer__inner">
 
       <div class="footer__brand">
         <div class="footer__brand-logo">
-          <img src="img/logo-transparente.png" alt="Logo Esquivel" />
+          <img src="img/logo-transparente.png" alt="Logo Esquivel" width="320" height="320" loading="lazy" />
           <div class="footer__brand-name">
             Percherones Esquivel
             <span>Puruándiro, Michoacán</span>
@@ -674,7 +663,13 @@
 
     <div class="footer__bottom">
       <p class="footer__copy footer-credit">
-        Desarrollado por 🐧 <a href="https://pingueb.com.mx" target="_blank" rel="noopener">Pingüeb</a>
+        Desarrollado por
+        <span class="footer-credit__brand">
+          <span class="footer-credit__mark" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </span>
+          Pyxel Digital
+        </span>
       </p>
       <div class="footer__social">
         <a href="https://www.instagram.com/veterinariasesquivel" class="footer__social-btn" target="_blank" rel="noopener" aria-label="Instagram">
